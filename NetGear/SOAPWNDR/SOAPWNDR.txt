@@ -60,7 +60,7 @@ to NetGear support. The initial response from NetGear support was that
 despite these issues "the network should still stay secure" due to a
 number of built-in security features. Attempts to clarify the impact of
 this vulnerability with support were unsuccessful. This ticket has since
-been auto-closed while waiting for a follow up. A subsiquent email sent
+been auto-closed while waiting for a follow up. A subsequent email sent
 to the NetGear 'OpenSource' contact has also gone unanswered.
 
 * If you have a NetGear device that is believed to be affected and can
