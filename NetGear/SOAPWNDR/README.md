@@ -38,7 +38,11 @@
 * 2015-01-30 - Case auto-closure email received from NetGear (support).
 * 2015-02-01 - Reply from Mitre requesting additional information.
 * 2015-02-01 - Email to Mitre with additional information.
-* 2015-02-11 - Vulnerability published to Bugtraq.
+* 2015-02-11 - Vulnerability published to Bugtraq and GitHub.
+
+##### Mitigation:
+* Ensure remote / WAN management is disabled on the affected devices.
+* Only allow trusted devices access to the local network.
 
 ##### Notes:
 1. Due to the location of this issue (net-cgi and uhttpd) this vulnerability may be present in other devices and firmware revisions not listed in this document.
