@@ -76,7 +76,7 @@ If we review an abridged version of the uhttpd code - taken from the NetGear WND
 
 When a HTTP request comes in `uh_path_lookup` is called to evaluate the requested URL (line 921). If the request path is found to be invalid by this lookup the rest of the block is bypassed and a 404 returned to the client (line 952).
 
-Further to this, due to some wacky routing happening at line 931, all we need to do is request a resource that exists and doesn't have `.gif`, `.jpg`, or `.css` somewhere in the filename and `ug_cgi_request` will be called.
+Further to this, due to the routing at line 931, all we need to do is request a resource that exists and doesn't have `.gif`, `.jpg`, or `.css` somewhere in the filename and `ug_cgi_request` will be called.
 
 Interestingly enough, `uh_auth_check` (line 924) is doing absolutely nothing here; we could replace this call with an `if(true)` and achieve the same functionality. This is not the fault of the uhttpd service but rather the lack of realm configuration on the device. If we rewind a bit to `uh_config_parse` we can see why.
 
@@ -163,13 +163,13 @@ function ExecuteSoapAction(SOAPNamespace, SOAPCall, ContentLength) {
 
   SOAPActionFound = false
   for each entry in SOAPActions as SOAPAction {
-    if SOAPAction == SOAPNamepsace {
+    if SOAPAction == SOAPNamespace {
       SOAPActionFound = true
       break
     }
   }
 
-  if SOAPNamepsace == "ParentalControl" {
+  if SOAPNamespace == "ParentalControl" {
     SOAPActionFound = true
     call soap_auth()
   }
@@ -188,7 +188,7 @@ Now that we know why `soap_auth` is only called for `ParentalControl`, the final
 
 ![ExecuteSoapAction-ContentLength](images/ExecuteSoapAction-ContentLength.png?raw=true)
 
-The `beqz` operation at `0x00429fdc` is being used to ensure that the content-length HTTP header is greater than zero. If the content-length is zero then a branch is made to `0x0042a0d4` which in-turn branches again to `0x0042a110`. At `0x0042a110` the address for `SendSoapRespCode` is pushed into `t9`, a static '401' pushed into `a1`, the save registers from the top of `ExecuteSoapAction` are pushed back into save registers from the stack, and `SendSoapRespCode` is called.
+The `beqz` operation at `0x00429fdc` is being used to ensure that the content-length HTTP header is greater than zero. If the content-length is zero then a branch is made to `0x0042a0d4` which in-turn branches again to `0x0042a110`. At `0x0042a110` the address for `SendSoapRespCode` is pushed into `t9`, a static '401' pushed into `a1`, the registers stored at the top of `ExecuteSoapAction` are pushed back into save registers from the stack, and `SendSoapRespCode` is called.
 
 ![ExeucuteSoapAction-401](images/ExecuteSoapAction-401.png?raw=true)
 
