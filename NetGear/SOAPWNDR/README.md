@@ -45,7 +45,7 @@
 
 2. These vulnerabilities can be leveraged "externally" over the internet, but require devices to have remote / WAN management enabled.
 
-3. In the absence of a known security contact these issues were reported to NetGear support. The initial response from NetGear support was that despite these issues "the network should still stay secure" due to a number of built-in security features. Attempts to clarify the impact of this vulnerability with support were unsuccessful. This ticket has since been auto-closed while waiting for a follow up. A subsequent email sent to the NetGear 'OpenSource' contact has also gone unanswered.
+3. In the absence of a known security contact these issues were reported to NetGear support. The initial response from NetGear support was that despite these issues "the network should still stay secure" due to a number of built-in security features. Attempts to clarify the nature of this vulnerability with support were unsuccessful. This ticket has since been auto-closed while waiting for a follow up. A subsequent email sent to the NetGear 'OpenSource' contact has also gone unanswered.
 
 4. If you have a NetGear device that is believed to be affected and can confirm whether the PoC works successfully, let me know and I will update this document accordingly with credit provided to you.
 
