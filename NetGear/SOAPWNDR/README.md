@@ -15,6 +15,9 @@
 * NetGear WNDR3700v4 - V1.0.1.52
 * NetGear WNR2200 - V1.0.1.88
 * NetGear WNR2500 - V1.0.0.24
+* NetGear WNDR3700v2 - V1.0.1.14 (Tested by Paula Thomas)
+* NetGear WNDR3700v1 - V1.0.16.98 (Tested by Michał Bartoszkiewicz)
+* NetGear WNDR3700v1 - V1.0.7.98 (Tested by Michał Bartoszkiewicz)
 
 ##### Additional platforms believed to be affected:
 * NetGear WNDR3800
