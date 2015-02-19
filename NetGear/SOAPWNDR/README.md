@@ -22,6 +22,7 @@
 * NetGear R6300v2 - V1.0.3.8 (Tested by Robert Müller)
 * NetGear WNDR3800 - V1.0.0.48 (Tested by an Anonymous contributor)
 * NetGear WNR1000v2 - V1.0.1.1 (Tested by Jimi Sebree)
+* NetGear WNR1000v2 - V1.1.2.58 (Tested by Chris Boulton)
 
 ##### Additional platforms believed to be affected:
 * NetGear WNDRMAC
