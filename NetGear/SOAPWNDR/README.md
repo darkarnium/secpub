@@ -20,6 +20,7 @@
 * NetGear WNDR3700v1 - V1.0.7.98 (Tested by Michał Bartoszkiewicz)
 * NetGear WNDR4300 - V1.0.1.60 (Tested by Ronny Lindner)
 * NetGear R6300v2 - V1.0.3.8 (Tested by Robert Müller)
+* NetGear WNDR3300 -  V1.0.45 (Tested by Robert Müller)*
 * NetGear WNDR3800 - V1.0.0.48 (Tested by an Anonymous contributor)
 * NetGear WNR1000v2 - V1.0.1.1 (Tested by Jimi Sebree)
 * NetGear WNR1000v2 - V1.1.2.58 (Tested by Chris Boulton)
@@ -59,6 +60,8 @@
 3. In the absence of a known security contact these issues were reported to NetGear support. The initial response from NetGear support was that despite these issues "the network should still stay secure" due to a number of built-in security features. Attempts to clarify the nature of this vulnerability with support were unsuccessful. This ticket has since been auto-closed while waiting for a follow up. A subsequent email sent to the NetGear 'OpenSource' contact has also gone unanswered.
 
 4. If you have a NetGear device that is believed to be affected and can confirm whether the PoC works successfully, let me know and I will update this document accordingly with credit provided to you.
+
+5. Robert Müller has found that some additional devices may be vulnerable via a service running on port 5000 - beleived to be uPnP. If your device is not vulnerable on the web management port, please try passing the `--port 5000` parameter to the ruby PoC to see whether this additional service is vulnerable.
 
 ### Overview
 
