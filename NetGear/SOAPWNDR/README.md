@@ -61,7 +61,7 @@
 
 4. If you have a NetGear device that is believed to be affected and can confirm whether the PoC works successfully, let me know and I will update this document accordingly with credit provided to you.
 
-5. Robert Müller has found that some additional devices may be vulnerable via a service running on port 5000 - beleived to be uPnP. If your device is not vulnerable on the web management port, please try passing the `--port 5000` parameter to the ruby PoC to see whether this additional service is vulnerable.
+5. Robert Müller has found that some additional devices may be vulnerable via a service running on TCP port 5000 - beleived to be uPnP. If your device is not vulnerable on the web management port, please try passing the `--port 5000` parameter to the ruby PoC to see whether this additional service is vulnerable.
 
 ### Overview
 

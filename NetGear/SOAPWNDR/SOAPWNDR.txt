@@ -82,9 +82,9 @@ will update the copy of this document on GitHub (see below) and provide
 credit for your findings.
 
 * Robert Müller has found that some additional devices may be vulnerable
-via a service running on port 5000 - beleived to be uPnP. If your device
-is not vulnerable on the web management port, please try passing the
-`--port 5000` parameter to the script as an additional test.
+via a service running on TCP port 5000 - beleived to be uPnP. If your
+device is not vulnerable on the web management port, please try passing
+the `--port 5000` parameter to the script as an additional test.
 
 ----
 "Genie" SOAP Service
