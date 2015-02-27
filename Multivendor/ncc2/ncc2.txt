@@ -29,6 +29,9 @@ D-Link DIR-810L (Rev B) - v2.02b01
 D-Link DIR-826L (Rev A) - v1.00b23
 D-Link DIR-830L (Rev A) - v1.00b07
 D-Link DIR-836L (Rev A) - v1.01b03
+TRENDnet TEW-711BR (Rev 1) - v1.00b31 - found by https://twitter.com/dyngnosis
+TRENDnet TEW-810DR (Rev 1) - v1.00b19 - found by https://twitter.com/dyngnosis
+TRENDnet TEW-813DRU (Rev 1) - v1.00b23 - found by https://twitter.com/dyngnosis
 
 Vendor involvement:
 ----

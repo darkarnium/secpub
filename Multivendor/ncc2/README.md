@@ -17,13 +17,16 @@
 * D-Link DIR-820L (Rev B) - v2.01b02
 * TRENDnet TEW-731BR (Rev 2) - v2.01b01
 
-##### Additional platforms believed to be affected:
+##### Additional platforms believed to be affected *:
 * D-Link DIR-808L (Rev A) - v1.03b05
 * D-Link DIR-810L (Rev A) - v1.01b04
 * D-Link DIR-810L (Rev B) - v2.02b01
 * D-Link DIR-826L (Rev A) - v1.00b23
 * D-Link DIR-830L (Rev A) - v1.00b07
 * D-Link DIR-836L (Rev A) - v1.01b03
+* TRENDnet TEW-711BR (Rev 1) - v1.00b31 - found by [@dyngnosis](https://twitter.com/dyngnosis)
+* TRENDnet TEW-810DR (Rev 1) - v1.00b19 - found by [@dyngnosis](https://twitter.com/dyngnosis)
+* TRENDnet TEW-813DRU (Rev 1) - v1.00b23 - found by [@dyngnosis](https://twitter.com/dyngnosis)
 
 ##### Vendor involvement:
 * 2015-01-11 - Issues reported to D-Link via email (security contact).
@@ -61,6 +64,25 @@
 * Remote execution of these exploits is possible, but requires the device to already have remote / WAN management enabled; except in the case of `ping.ccp`, as above.
 
 * If you have a D-Link device that is believed to be affected and can confirm whether the PoC is successful, please let me know and I will update this document and provide credit for your findings.
+
+### Affected string table
+
+In lieu of having access to the hardware to verify whether these vulnerabilities are present on devices listed as believed affected, analysis of the `ncc` / `ncc2` binaries present on these platforms has been performed.
+
+As these binaries contain the 'offending' string, into which commands are able to be injected, we have strong suspicions that these devices are affected.
+
+| Device     | Firmware | Address   |
+|------------|----------|-----------|
+| DIR-808LA1 | 1.03b05  | `0x56c12c` |
+| DIR-810LA1 | 1.01b04  | `0x562fe0` |
+| DIR-820LA1 | 1.02b10  | `0x547434` |
+| DIR-826LA1 | 1.02b26  | `0x559eec` |
+| DIR-830LA1 | 1.00b07  | `0x55e2f8` |
+| DIR-836LA1 | 1.01b03  | `0x55a82c` |
+| TEW-731BRV2 | 2.00b08 | `0x4dc048`|
+| TEW-711BRV1 | 1.00b31  | `0x47c584` |
+| TEW-810DRV1 | 1.00b19  | `0x567238` |
+| TEW-813DRUV1 | 1.00b23 | `0x4e4b34` |
 
 ### fwupgrade.ccp
 
