@@ -2,14 +2,16 @@
 
 ##### Discovered by:
 * Peter Adkins &lt;peter.adkins@kernelpicnic.net&gt;
+* Tiago Caetano Henriques &lt;[@Balgan](https://twitter.com/Balgan)&gt; (See notes)
 
 ##### Access:
-* Local network; unauthenticated access.
-* Remote network; unauthenticated access*.
-* Remote network; 'drive-by' via CSRF.
+* Local network; unauthenticated access
+* Remote network; unauthenticated access (See notes)
+* Remote network; 'drive-by' via CSRF
 
 ##### Tracking and identifiers:
-* CVE - Mitre contacted; not yet allocated.
+* CVE - Mitre contacted; not yet allocated
+* CVE - ping.ccp - CVE-2015-1187 (See notes)
 
 ##### Platforms / Firmware confirmed affected:
 * D-Link DIR-820L (Rev A) - v1.02B10
@@ -55,6 +57,9 @@
 * If using a listed D-Link device you'll need to use a third party tool such as µBlock (Chrome, Firefox and Safari) to blacklist requests to your router. This isn't ideal, but it's better than the alternative.
 
 ##### Notes:
+* I was contacted on the morning of 2015-03-02 (PDT) that the `ping.ccp` vulnerability had already been found on November 30th 2014 by Tiago Caetano Henriques. This was reported to Swisscom CSIRT on the December 18th 2014. I've updated the document to reflect this information, the advisory for which has now been published at:
+  * http://seclists.org/fulldisclosure/2015/Mar/15
+
 * Due to the nature of the the `ping.ccp` vulnerability, an attacker can gain root access, hijack DNS settings or execute arbitrary commands on these devices with the user simply visiting a webpage with a malicious HTTP form embedded (via CSRF).
 
 * Due to the location of this issue (`ncc` / `ncc2`) these vulnerabilities may be present in other devices and firmware versions not listed in this document.
