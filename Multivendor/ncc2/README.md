@@ -57,7 +57,7 @@
 * If using a listed D-Link device you'll need to use a third party tool such as µBlock (Chrome, Firefox and Safari) to blacklist requests to your router. This isn't ideal, but it's better than the alternative.
 
 ##### Notes:
-* I was contacted on the morning of 2015-03-02 (PDT) that the `ping.ccp` vulnerability had already been found on November 30th 2014 by Tiago Caetano Henriques. This was reported to Swisscom CSIRT on the December 18th 2014. I've updated the document to reflect this information, the advisory for which has now been published at:
+* I was contacted on the morning of March 3rd 2015 (PDT) and informed that the `ping.ccp` vulnerability had already been found on November 30th 2014 by Tiago Caetano Henriques. This was reported to Swisscom CSIRT on the December 18th 2014. I've updated the document to reflect this information, the advisory for which has now been published at:
   * http://seclists.org/fulldisclosure/2015/Mar/15
 
 * Due to the nature of the the `ping.ccp` vulnerability, an attacker can gain root access, hijack DNS settings or execute arbitrary commands on these devices with the user simply visiting a webpage with a malicious HTTP form embedded (via CSRF).
