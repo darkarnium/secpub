@@ -19,7 +19,7 @@
 * D-Link DIR-820L (Rev B) - v2.01b02
 * TRENDnet TEW-731BR (Rev 2) - v2.01b01
 
-##### Additional platforms believed to be affected *:
+##### Additional platforms believed to be affected (see notes):
 * D-Link DIR-808L (Rev A) - v1.03b05
 * D-Link DIR-810L (Rev A) - v1.01b04
 * D-Link DIR-810L (Rev B) - v2.02b01
