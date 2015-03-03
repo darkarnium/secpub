@@ -14,18 +14,23 @@
 * CVE - ping.ccp - CVE-2015-1187 (See notes)
 
 ##### Platforms / Firmware confirmed affected:
-* D-Link DIR-820L (Rev A) - v1.02B10
-* D-Link DIR-820L (Rev A) - v1.05B03
-* D-Link DIR-820L (Rev B) - v2.01b02
-* TRENDnet TEW-731BR (Rev 2) - v2.01b01
-
-##### Additional platforms believed to be affected (see notes):
+* D-Link DIR-626L (Rev A) - v1.04b04
+* D-Link DIR-636L (Rev A) - v1.04
 * D-Link DIR-808L (Rev A) - v1.03b05
 * D-Link DIR-810L (Rev A) - v1.01b04
 * D-Link DIR-810L (Rev B) - v2.02b01
+* D-Link DIR-820L (Rev A) - v1.02B10
+* D-Link DIR-820L (Rev A) - v1.05B03
+* D-Link DIR-820L (Rev B) - v2.01b02
 * D-Link DIR-826L (Rev A) - v1.00b23
 * D-Link DIR-830L (Rev A) - v1.00b07
 * D-Link DIR-836L (Rev A) - v1.01b03
+* TRENDnet TEW-731BR (Rev 2) - v2.01b01
+
+##### Additional platforms believed to be affected (see notes):
+* D-Link DIR-651 (Rev A) - v1.10NAb02 - found by [Stefan Viehböck](https://twitter.com/sviehb)
+* TRENDnet TEW-651BR (v2.XR) - vUNKNOWN - found by [Stefan Viehböck](https://twitter.com/sviehb)
+* TRENDnet TEW-652BRP (v3.XR) - vUNKNOWN - found by [Stefan Viehböck](https://twitter.com/sviehb)
 * TRENDnet TEW-711BR (Rev 1) - v1.00b31 - found by [@dyngnosis](https://twitter.com/dyngnosis)
 * TRENDnet TEW-810DR (Rev 1) - v1.00b19 - found by [@dyngnosis](https://twitter.com/dyngnosis)
 * TRENDnet TEW-813DRU (Rev 1) - v1.00b23 - found by [@dyngnosis](https://twitter.com/dyngnosis)
@@ -49,6 +54,7 @@
 * 2015-02-22 - Replied to D-Link support clarifying my request.
 * 2015-02-23 - D-Link support directed me to the security reporting guide.
 * 2015-02-26 - Vulnerability published to Bugtraq and GitHub.
+* 2015-03-02 - D-Link published advisory [SAP10052](http://securityadvisories.dlink.com/security/publication.aspx?name=SAP10052) regarding issue. 
 
 ##### Mitigation:
 * Ensure remote / WAN management is disabled on the affected devices.
@@ -57,7 +63,7 @@
 * If using a listed D-Link device you'll need to use a third party tool such as µBlock (Chrome, Firefox and Safari) to blacklist requests to your router. This isn't ideal, but it's better than the alternative.
 
 ##### Notes:
-* I was contacted on the morning of March 3rd 2015 (PDT) and informed that the `ping.ccp` vulnerability had already been found on November 30th 2014 by Tiago Caetano Henriques. This was reported to Swisscom CSIRT on December 18th 2014. The advisory for which has since been published at:
+* I was contacted on the morning of March 3rd 2015 (PDT) and informed that the `ping.ccp` vulnerability had already been found INDEPENDENTLY on November 30th 2014 by Tiago Caetano Henriques. This was reported to Swisscom CSIRT on December 18th 2014. The advisory for which has since been published at:
   * http://seclists.org/fulldisclosure/2015/Mar/15
 
 * Due to the nature of the the `ping.ccp` vulnerability, an attacker can gain root access, hijack DNS settings or execute arbitrary commands on these devices with the user simply visiting a webpage with a malicious HTTP form embedded (via CSRF).
@@ -78,6 +84,7 @@ As these binaries contain the 'offending' string, into which commands are able t
 
 | Device     | Firmware | Address   |
 |------------|----------|-----------|
+| DIR-651A2  | 1.10NAb02 | `0x4ac694` |
 | DIR-808LA1 | 1.03b05  | `0x56c12c` |
 | DIR-810LA1 | 1.01b04  | `0x562fe0` |
 | DIR-820LA1 | 1.02b10  | `0x547434` |
