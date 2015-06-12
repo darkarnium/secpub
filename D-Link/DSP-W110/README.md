@@ -80,18 +80,20 @@ curl \
 
 There's really nothing much to say here, the reason this vulnerability exists is trivial.
 
-While processing the HTTP headers for an incoming request, the patched `lighttpd` copies any cookies into `hnap_cookie` inside of `request.c` (line 845).
+While processing the HTTP headers for an incoming request, the patched `lighttpd` copies any cookies found in the request into `hnap_cookie` inside of `request.c` (line 845).
 
 ![request-http_parse_request](./images/request_http_parse_request.png)
 
-This `hnap_cookie` variable pops up again inside of `mod_hnap.c` where the value is parsed out (line 30)...
+These cookies are then processed inside of `mod_hnap.c` where the value is parsed out (line 30) of the string.
 
 ![mod_hnap-getHNAPCookie](./images/request_getHNAPCookie.png)
 
-...munged into an SQL query via `sprintf()` (line 56) and thrown at `popen()` (line 64).
+This value is then munged into an SQL query via `sprintf()` (line 56), and thrown at `popen()` (line 64).
 
 ![mod_hnap-getQueryTime](./images/mod_hnap_getQueryTime.png)
 
-As a result, we can pop a root shell and snatch the configuration database with just a couple of HTTP calls:
+This is almost a text-book example of exactly how not to handle handle user input, especially considering that it is both an SQL query, AND a command passed to a root shell. In fact, this _IS_ a text-book example of how not to do things.
+
+As a result of this lack of sanitization, a root shell can be popped, and the configuration database snatched, all through a couple of HTTP calls.
 
 ![ruby-PoC](./images/ruby_PoC.png)
