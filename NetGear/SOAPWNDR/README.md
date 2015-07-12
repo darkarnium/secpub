@@ -27,6 +27,7 @@
 * NetGear WNR2200 - V1.0.1.76 (Tested by Marcin Praczko)
 * NetGear WNR2000v3 - v1.1.2.6 (Tested by Shelby Spencer)
 * NetGear WNR2000v3 - V1.1.2.10 (Tested by Roland Schiebel)
+* NetGear R7500 - V1.0.0.82 (Tested by Team Event Tech)
 
 ##### Additional platforms believed to be affected:
 * NetGear WNDRMAC
