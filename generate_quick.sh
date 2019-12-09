@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Trim old links from README.md
-HEADER=$(grep -n '\#\# Quick Links' README.md | cut -d ':' -f 1)
+HEADER=$(grep -n '\#\# Vulnerabilities' README.md | cut -d ':' -f 1)
 head -n ${HEADER} README.md | tee README.md
 
 # Generate new links
